@@ -26,7 +26,9 @@ This application is a book search engine that uses google books API and MERN sta
 
 ## Usage
 
+
 ## Future Development
+For future development of this application, I would like to change the UI to be more uniform. I would change the cards for the books to have space around each item and for the description to have a character limit.
 
 ## Contact
 

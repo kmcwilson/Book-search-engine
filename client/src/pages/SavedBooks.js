@@ -9,11 +9,13 @@ import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
   // use this to determine if `useEffect()` hook needs to run again
+  const { loading, data }= useQuery(GET_ME );
+  const userData = data?.me || [];
   const userDataLength = Object.keys(userData).length;
 const [removeBook] = useMutation(REMOVE_BOOK);
- const { loading, data }= useQuery(GET_ME );
+
 if (loading){ return <h1> Loading ...</h1>}
- const userData = data?.me || [];
+
 
 
 
@@ -26,11 +28,11 @@ if (loading){ return <h1> Loading ...</h1>}
     }
 
     try {
-      const response = await removeBook({variables: {bookId}});
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+      await removeBook({variables:{bookId}});
+console.log('Data:', data);
+      // if (!response.ok) {
+      //   throw new Error('something went wrong!');
+      // }
 
       // upon success, remove book's id from localStorage
       removeBookId(bookId);

@@ -42,6 +42,7 @@ const resolvers = {
         },
 
         saveBook: async (parent, args, context) => {
+            console.log('arguments:', args);
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id },
