@@ -4,7 +4,7 @@
 This application is a book search engine that uses google books API and MERN stack. The application uses `React` for the front end, `MongoDB`, `Node.js` and `Express.js`. This application uses an Apollo server with graphql mutations and queries in order for users to create an account, search for books, and save books to their account. The webpage has been deployed using Heroku. 
 
 ## Link to website
-![Live Heroku Site](https://arcane-fortress-43492.herokuapp.com/)
+[Live Heroku Site](https://arcane-fortress-43492.herokuapp.com/)
 
 ## Table of Contents
 * [Technologies](##technologies)
